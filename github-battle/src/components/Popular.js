@@ -22,17 +22,17 @@ class Popular extends React.Component {
       });
   }
 
-  // componentDidUpdate(_prevProps, prevState) {
-  //   if (prevState.selectedLanguage !== this.state.selectedLanguage) {
-  //     fetch(
-  //       `https://api.github.com/search/repositories?q=stars:%3E1+language:${this.state.selectedLanguage}&sort=stars&order=desc&type=Repositories`
-  //     )
-  //       .then((res) => res.json())
-  //       .then((data) => {
-  //         this.setState({ repos: data.items });
-  //       });
-  //   }
-  // }
+  componentDidUpdate(_prevProps, prevState) {
+    if (prevState.selectLang !== this.state.selectLang) {
+      fetch(
+        `https://api.github.com/search/repositories?q=stars:%3E1+language:${this.state.selectLang}&sort=stars&order=desc&type=Repositories`
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          this.setState({ repos: data.items });
+        });
+    }
+  }
 
   handleLang = (lang) => {
     this.setState((prevState) => ({

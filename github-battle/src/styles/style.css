@@ -175,4 +175,13 @@ h1 {
 h2 {
   font-size: 2rem;
   text-align: center;
+  margin-bottom: 1rem;
+}
+i {
+  padding: 1rem;
+  background-color: #ebebeb;
+}
+
+h3 {
+  font-size: 2rem;
 }

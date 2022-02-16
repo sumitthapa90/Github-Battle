@@ -32,11 +32,13 @@ class Header extends React.Component {
             </nav>
 
             <div className="lighting">
-              {1 ? (
-                <i className="fas fa-sun"></i>
-              ) : (
-                <i className="fas fa-moon"></i>
-              )}
+              <div>
+                {1 ? (
+                  <i className="fas fa-sun"></i>
+                ) : (
+                  <i className="fas fa-moon"></i>
+                )}
+              </div>
             </div>
           </div>
         </header>
